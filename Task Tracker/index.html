@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="./style.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+
+  <body>
+
+    <section class="container">
+      <div class="card-container">
+        <div class="yellow"></div>
+        <div class="to-do">
+          <h1>To-Do List</h1>
+        </div>
+        <div class="icon">
+          <button class="icon-button" type="submit">
+            <img class="icon-image" alt="arrange-symbol" src="./images/grey-down.svg" />
+          </button>
+        </div>
+        <div class="input-box">
+          <input id="input-text" type="text" />
+          <button class="erase-button" type="submit">
+            <img alt="buttonpng" class="erase" src="./images/white.svg" />
+          </button>
+        </div>
+        <div class="list-container hidden"></div>
+        <div class="add-button">
+          <button class="plus" type="submit">+</button>
+          <button class="add">Добавить</button>
+        </div>
+      </div>
+    </section>
+
+    <script src="./index.js"></script>
+
+  </body>
+
+</html>

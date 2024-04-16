@@ -1,0 +1,125 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 336px;
+  border: 1px solid #c4c4c4;
+  border-radius: 10px;
+}
+
+.yellow {
+  height: 27px;
+  width: 100%;
+  background-color: #ffdc40;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.to-do {
+  margin-top: -10px;
+  text-align: center;
+}
+
+.icon {
+  display: flex;
+  align-self: flex-end;
+  width: 64px;
+}
+
+button {
+  background-color: white;
+  border: none;
+}
+
+.input-box {
+  height: 40px;
+  width: 286px;
+  border: 1px solid #c4c4c4;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+}
+
+/* For hide visibility */
+.input-box.hidden {
+  display: none;
+}
+
+input {
+  padding: 0 0 0 10px;
+  width: 205px;
+  height: 27px;
+  border: none;
+  outline: none;
+  background-color: white;
+  margin: 5px;
+}
+
+.list-text {
+  width: 300px;
+}
+
+.list-container {
+  display: flex;
+  flex-direction: column;
+  width: 286px;
+  border: 1px solid #c4c4c4;
+  border-radius: 10px;
+  list-style: none;
+  margin-top: 10px;
+}
+
+/* Same shit as .input-box.hidden*/
+.list-container.hidden {
+  display: none;
+}
+
+.list-container .list-item {
+  display: flex;
+  align-items: center;
+  margin: 5px;
+}
+
+.list-container .list-item span {
+  display: block;
+  padding: 0 0 0 15px;
+  width: 205px;
+}
+
+.add-button {
+  display: flex;
+  background-color: #833ae0;
+  border-radius: 71px;
+  height: 42px;
+  width: 150px;
+  margin: 18px;
+}
+
+.add {
+  border: none;
+  background-color: #833ae0;
+  border-radius: 71px;
+  color: white;
+  margin-left: 10px;
+}
+
+.plus {
+  border: none;
+  height: 42px;
+  width: 42px;
+  border-radius: 50%;
+  background-color: #9953f1;
+  color: white;
+}
