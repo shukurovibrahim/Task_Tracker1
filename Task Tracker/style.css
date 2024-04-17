@@ -65,6 +65,7 @@ input {
   outline: none;
   background-color: white;
   margin: 5px;
+  overflow: hidden;
 }
 
 .list-text {
@@ -92,10 +93,13 @@ input {
   margin: 5px;
 }
 
+
 .list-container .list-item span {
   display: block;
   padding: 0 0 0 15px;
   width: 205px;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .add-button {
