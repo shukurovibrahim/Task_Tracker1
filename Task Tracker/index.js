@@ -1,3 +1,4 @@
+// Defining html element to JavaScript
 const listContainer = document.querySelector(".list-container");
 const inputBox = document.querySelector(".input-box");
 const inputElement = inputBox.querySelector("#input-text");
@@ -7,6 +8,7 @@ const addElement = document.querySelector(".add");
 const plusElement = document.querySelector(".plus");
 const iconArrow = document.querySelector(".icon-image");
 
+// addEventlistener for changing img of icon in hover and click cases
 let isFirstImage = true;
 
 iconArrow.addEventListener("click", toggleImage);
@@ -15,16 +17,17 @@ iconArrow.addEventListener("mouseout", hoverOut);
 
 function toggleImage() {
     if (isFirstImage) {
-        iconArrow.src = "./images/grey-up.svg";
+        iconArrow.src = "./images/grey-up.svg";  // for sorting list items that we get from input in ascending
         sortListItems("asc");
         isFirstImage = false;
     } else {
-        iconArrow.src = "./images/grey-down.svg";
+        iconArrow.src = "./images/grey-down.svg"; // for sorting list items that we get from input in descending
         sortListItems("desc");
         isFirstImage = true;
     }
 }
 
+// When mouse on the icon it turns into black copy of the img
 function hoverIn() {
     if (isFirstImage) {
         iconArrow.src = "./images/black-down.svg";
@@ -33,6 +36,7 @@ function hoverIn() {
     }
 }
 
+// When we move mouse away it turns back to its original color
 function hoverOut() {
     if (isFirstImage) {
         iconArrow.src = "./images/grey-down.svg";
@@ -41,6 +45,7 @@ function hoverOut() {
     }
 }
 
+// Creating function in order to sort element by comparing if direction equal to "asc" or not and return 
 function sortListItems(direction) {
   const listItems = Array.from(listContainer.querySelectorAll(".list-item"));
 
@@ -68,6 +73,7 @@ function sortListItems(direction) {
   listItems.forEach(item => listContainer.appendChild(item));
 }
 
+// Mouse hover effect for button that clears text both from input and list items
 const circleHoverEffect = (img) => {
   img.addEventListener("mouseenter", () => {
     img.src = "./images/purple.svg";
@@ -80,6 +86,7 @@ const circleHoverEffect = (img) => {
 
 circleHoverEffect(xCircle);
 
+// Creating createListItem in order to add new classes and elements to our document with js
 const createListItem = (text) => {
   const rootDiv = document.createElement("div");
   rootDiv.classList.add("list-item");
@@ -108,8 +115,10 @@ const createListItem = (text) => {
   });
 };
 
+// Array for containing our list item in order to sort them after that
 const arr = [];
 
+// Button for saving our inputs and making list of them
 addElement.addEventListener("click", () => {
   const content = inputElement.value;
   if (content !== "") {
@@ -124,11 +133,13 @@ addElement.addEventListener("click", () => {
   }
 });
 
+// Clearing text in input box that we typed
 eraseInputBtn.addEventListener("click", () => {
   inputElement.value = "";
   inputElement.focus();
 });
 
+// Creating button to add new list item and we call hidden input box to do process again
 plusElement.addEventListener("click", () => {
   inputBox.classList.remove("hidden");
   inputElement.focus();
