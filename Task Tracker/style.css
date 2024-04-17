@@ -98,8 +98,7 @@ input {
   display: block;
   padding: 0 0 0 15px;
   width: 205px;
-  white-space: nowrap;
-  overflow: hidden;
+  word-wrap: break-word;
 }
 
 .add-button {
