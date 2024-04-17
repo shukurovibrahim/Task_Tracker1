@@ -7,7 +7,7 @@ const addElement = document.querySelector(".add");
 const plusElement = document.querySelector(".plus");
 const iconArrow = document.querySelector(".icon-image");
 
-var isFirstImage = true;
+let isFirstImage = true;
 
 iconArrow.addEventListener("click", toggleImage);
 iconArrow.addEventListener("mouseover", hoverIn);
